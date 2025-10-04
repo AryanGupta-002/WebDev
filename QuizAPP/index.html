@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App - Aryan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interactive Quiz App - Aryan Gupta</h1>
+            <p>Full Stack Development Project 2 !</p>
+        </header>
+
+        <div class="card">
+            <!-- Welcome Screen -->
+            <div id="welcome-screen" class="screen active-screen">
+                <div class="welcome-content">
+                    <h2>Welcome to Quiz App by Aryan!</h2>
+                    <p>Challenge yourself with our interactive quizzes.</p>
+                    <p>Click 'Start Quiz' to begin the Challenge of the Smartest.</p>
+                </div>
+
+                <button id="start-btn" class="btn">Start Quiz</button>
+            </div>
+
+            <!-- Loading Screen -->
+            <div id="loader" class="loader">
+                <div class="spinner"></div>
+                <p>Loading your quiz questions...</p>
+            </div>
+
+            <!-- Quiz Screen -->
+            <div id="quiz-screen" class="screen">
+                <div class="quiz-header">
+                    <div class="question-counter">
+                        <span id="current-question">1</span>/<span id="total-questions">10</span>
+                    </div>
+                    <div class="quiz-score">
+                        Score: <span id="current-score">0</span>
+                    </div>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+
+                <div class="timer-container">
+                    <div class="timer" id="timer">00:30</div>
+                </div>
+
+                <div class="question-container">
+                    <h3 class="question-text" id="question-text">What is the capital of France?</h3>
+                    <div class="options-container" id="options-container">
+                        <!-- Options will be populated by JS -->
+                    </div>
+                </div>
+
+                <button id="next-btn" class="btn">Next Question</button>
+            </div>
+
+            <!-- Results Screen -->
+            <div id="results-screen" class="screen">
+                <div class="results-header">
+                    <h2>Quiz Completed!</h2>
+                    <p>Here's how you performed</p>
+                </div>
+
+                <div class="results-details">
+                    <div class="score-container">
+                        <div class="score-circle">
+                            <span class="score-value" id="final-score">0</span>
+                            <span class="score-text">points</span>
+                        </div>
+                    </div>
+
+                    <div class="performance-stats">
+                        <div class="stat-item">
+                            <div class="stat-value" id="correct-answers">0</div>
+                            <div class="stat-label">Correct</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="wrong-answers">0</div>
+                            <div class="stat-label">Wrong</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="accuracy">0%</div>
+                            <div class="stat-label">Accuracy</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button id="play-again-btn" class="btn">Play Again</button>
+                    <button id="home-btn" class="btn btn-outline">Back to Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="backend.js"></script>
+    <script src="server.js"></script>
+</body>
+</html>
